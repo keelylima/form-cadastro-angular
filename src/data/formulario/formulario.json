@@ -1,0 +1,19 @@
+{
+    "pessoas": [
+        {
+            "nome": "Juliano Santos",
+            "dataNasc": "14/02/1988",
+            "sexo": "Masculino"
+        },
+        {
+            "nome": "Marcia Abravanel",
+            "dataNasc": "05/11/1990",
+            "sexo": "Feminino"
+        },
+        {
+            "nome": "Maria Luiza",
+            "dataNasc": "05/11/1990",
+            "sexo": "20/07/2001"
+        }
+    ]
+}

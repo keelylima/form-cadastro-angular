@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -85,7 +86,8 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/data"
             ],
             "styles": [
               "src/styles.css"
@@ -119,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "teste-accenture"
+    }
+  },
+  "defaultProject": "teste-accenture",
+  "cli": {
+    "analytics": "4fdcbbda-7ccf-4528-b8c1-7aa157d0b07f"
+  }
 }
