@@ -45,11 +45,20 @@ cadastros: any = [
   }
 
   addUser(user) {
-    this.cadastros.push({ 
+    console.log(this.cadastros.push({ 
       nome: user.nome,
       datNasc: user.datNasc,
       sexo: user.sexo
-    })
+    }))
+
+  }
+
+  showForm() {
+    this.isForm = true;
+  }
+
+  hideForm() {
+    this.isForm = false;
   }
 
 
