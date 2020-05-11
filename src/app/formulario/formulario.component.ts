@@ -19,14 +19,6 @@ export class FormularioComponent implements OnInit {
   faMars = faMars;
 
 
-//   clickAdd() {
-//     this.isForm = true;
-//   }
-
-//   salvarValor(valor) {
-//     this.valorSalvo = valor;
-//   }
-
 cadastros: any = [
   {
     nome: 'Ana',
@@ -50,7 +42,6 @@ cadastros: any = [
       datNasc: user.datNasc,
       sexo: user.sexo
     })
-
   }
 
   cleanForm(formulario) {
@@ -73,12 +64,6 @@ cadastros: any = [
   constructor() { }
 
   ngOnInit(): void {
-    // this.getMovies();
   }
-
-  // getMovies() {
-  //   console.log(this.formularioService.getMovies());
-        
-  // }
 
 }
