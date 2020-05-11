@@ -115,7 +115,7 @@
     </div>
   </div>
 
-  <button class="btn btn-danger mr-3">Cancelar</button>
+  <button class="btn btn-danger mr-3" (click)="cleanForm(f)">Cancelar</button>
   <button type="submit" (click)="addUser(f.value)" (click)="hideForm()" [disabled]="!f.valid" class="btn btn-primary">Salvar</button>
 
 </form>

@@ -45,12 +45,20 @@ cadastros: any = [
   }
 
   addUser(user) {
-    console.log(this.cadastros.push({ 
+      this.cadastros.push({ 
       nome: user.nome,
       datNasc: user.datNasc,
       sexo: user.sexo
-    }))
+    })
 
+  }
+
+  cleanForm(formulario) {
+    formulario.form.patchValue({
+      nome: null,
+      datNasc: null,
+      sexo: null
+    })
   }
 
   showForm() {
