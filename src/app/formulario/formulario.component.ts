@@ -18,53 +18,6 @@ export class FormularioComponent implements OnInit {
   faVenus = faVenus;
   faMars = faMars;
 
-  // movies: Array<any>; //funciona sem (?)
-
-
-  // novoCadastro: any = {
-  //   nome: '',
-  // }
-
-
-
-  //mock cadastros
-//   cadastros: any = [
-//     {
-//       nome: 'João',
-//       datNasc: '14/02/2002',
-//       sexo: 'Masculino'
-
-//    },
-//    {
-//       nome: 'Maria Isabel',
-//       datNasc: '20/09/1988',
-//       sexo: 'Feminino'
-//   },
-//   {
-//       nome: 'Fernanda Lima',
-//       datNasc: '04/12/1995',
-//       sexo: 'Feminino'
-//   },
-//   {
-//     nome: 'Marco Aurélio',
-//     datNasc: '17/03/1985',
-//     sexo: 'Masculino'
-// }
-// ]
-
-// pushCadastro(){
-//   if (this.novoCadastro != "") {
-//     console.log(this.cadastros.push(
-//       { 
-//         nome: this.novoCadastro, 
-//         sexo: this.novoCadastro
-//       }
-//       ));
-    
-//     // this.newPessoa = ""; //limpar campo
-//   }
-// }
-
 
 //   clickAdd() {
 //     this.isForm = true;
@@ -87,11 +40,6 @@ cadastros: any = [
   }
 ]
 
-novoCadastro = {
-  nome: '',
-}
-
-
   onSubmit(form) {
     console.log(form.value)
   }
@@ -102,7 +50,6 @@ novoCadastro = {
       datNasc: user.datNasc,
       sexo: user.sexo
     })
-    console.log(this.cadastros)
   }
 
 

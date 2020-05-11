@@ -75,7 +75,12 @@
       <tr *ngFor="let cadastro of cadastros">
         <td>{{ cadastro.nome }}</td>
         <td>{{ cadastro.datNasc }}</td>
-        <td>{{ cadastro.sexo }}</td>
+        <td [hidden]="cadastro.sexo == 'Feminino'">
+          <fa-icon [icon]="faMars"></fa-icon>
+        </td>
+        <td [hidden]="cadastro.sexo == 'Masculino'">
+          <fa-icon [icon]="faVenus"></fa-icon>
+        </td>
       </tr>
     </tbody>
   </table>
