@@ -22,12 +22,12 @@ export class FormularioComponent implements OnInit {
 cadastros: any = [
   {
     nome: 'Ana',
-    datNasc: '10/02/2003',
+    datNasc: '10-02-2003',
     sexo: 'Feminino'
   },
   {
     nome: 'Julio',
-    datNasc: '10/02/1992',
+    datNasc: '10-02-1992',
     sexo: 'Masculino'
   }
 ]
@@ -44,6 +44,7 @@ cadastros: any = [
     })
   }
 
+
   cleanForm(formulario) {
     formulario.form.patchValue({
       nome: null,
@@ -58,6 +59,10 @@ cadastros: any = [
 
   hideForm() {
     this.isForm = false;
+  }
+
+  search(evento) {
+    console.log(evento.target.value)
   }
 
 
