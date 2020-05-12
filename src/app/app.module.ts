@@ -11,6 +11,11 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FilterFormPipe } from './filter-form.pipe';
 
+// search module
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +29,7 @@ import { FilterFormPipe } from './filter-form.pipe';
     HttpClientModule,
     FormsModule,
     FontAwesomeModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

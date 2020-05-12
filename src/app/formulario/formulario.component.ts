@@ -18,6 +18,8 @@ export class FormularioComponent implements OnInit {
   faVenus = faVenus;
   faMars = faMars;
 
+  pesquisa: any;
+
 
 cadastros: any = [
   {

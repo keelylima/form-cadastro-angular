@@ -2,7 +2,7 @@
 
   <div class="form-group mb-5">
     <label for="pesquisa" class="control-label">Pesquisa</label>
-    <input type="text"  class="form-control" id="pesquisa" placeholder="Faça sua busca" name="pesquisa" ngModel #pesquisa="ngModel" (blur)="search($event)">
+    <input type="text"  class="form-control" id="pesquisa" placeholder="Faça sua busca" name="pesquisa" [(ngModel)]="pesquisa">
   </div>
 
 
@@ -15,7 +15,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let cadastro of cadastros | filterForm">
+      <tr *ngFor="let cadastro of cadastros | filter:pesquisa">
         <td>{{ cadastro.nome }}</td>
         <td>{{ cadastro.datNasc }}</td>
         <td [hidden]="cadastro.sexo == 'Feminino'">
