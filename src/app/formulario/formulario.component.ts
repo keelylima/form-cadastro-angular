@@ -13,7 +13,6 @@ import { faVenus, faMars } from '@fortawesome/free-solid-svg-icons';
 export class FormularioComponent implements OnInit {
 
   isForm: boolean = false;
-  valorSalvo: string = '';
 
   faVenus = faVenus;
   faMars = faMars;
