@@ -6,24 +6,14 @@ import { Injectable } from '@angular/core';
 })
 export class FormularioService {
 
-  apiUrl = 'src/data/formulario/formulario';
+  apiUrl = 'https://5ebdb510ec34e900161924dc.mockapi.io/api/users';
 
   
 
-  constructor(
-    private http: HttpClient
-  ) { }
+  constructor(private http: HttpClient) { }
 
-  getMovies() {
-
-    this.http.get(this.apiUrl).subscribe(
-      n => console.log('n', n)
-    )
+  getUsers() {
+      return this.http.get<any[]>(`${this.apiUrl}`);
   }
-
-//   getMovie(id: string): Observable<any[]>{
-//     const url = `${this.apiUrl}/${id}`;
-//     return this.http.get<any[]>(url)
-//   }
 
 }

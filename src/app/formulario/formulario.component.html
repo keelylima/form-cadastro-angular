@@ -15,13 +15,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let cadastro of cadastros | filter:pesquisa">
-        <td>{{ cadastro.nome }}</td>
-        <td>{{ cadastro.datNasc }}</td>
-        <td [hidden]="cadastro.sexo == 'Feminino'">
+      <tr *ngFor="let user of users | filter:pesquisa">
+        <td>{{ user.nome }}</td>
+        <td>{{ user.dataNasc }}</td>
+        <td [hidden]="user.sexo == 'Feminino'">
           <fa-icon [icon]="faMars"></fa-icon>
         </td>
-        <td [hidden]="cadastro.sexo == 'Masculino'">
+        <td [hidden]="user.sexo == 'Masculino'">
           <fa-icon [icon]="faVenus"></fa-icon>
         </td>
       </tr>
@@ -35,7 +35,7 @@
 
 
 
-<form class="container mt-5" #f="ngForm" (ngSubmit)="onSubmit(f)" [style.display]="isForm ? 'block': 'none'">
+<form class="container mt-5" #f="ngForm" [style.display]="isForm ? 'block': 'none'">
 
   <div class="form-group">
     <label for="nome" class="control-label">Nome</label>

@@ -20,26 +20,27 @@ export class FormularioComponent implements OnInit {
 
   pesquisa: any;
 
+  users: any[];
 
-cadastros: any = [
-  {
-    nome: 'Ana',
-    datNasc: '10-02-2003',
-    sexo: 'Feminino'
-  },
-  {
-    nome: 'Julio',
-    datNasc: '10-02-1992',
-    sexo: 'Masculino'
-  }
-]
+// cadastros: any = [
+//   {
+//     nome: 'Ana',
+//     datNasc: '10-02-2003',
+//     sexo: 'Feminino'
+//   },
+//   {
+//     nome: 'Julio',
+//     datNasc: '10-02-1992',
+//     sexo: 'Masculino'
+//   }
+// ]
 
-  onSubmit(form) {
-    console.log(form.value)
-  }
+  // onSubmit(form) {
+  //   console.log(form.value)
+  // }
 
   addUser(user) {
-      this.cadastros.push({ 
+      this.users.push({ 
       nome: user.nome,
       datNasc: user.datNasc,
       sexo: user.sexo
@@ -68,9 +69,18 @@ cadastros: any = [
   }
 
 
-  constructor() { }
+  constructor(private formularioService: FormularioService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.getUsers();
+  }
+
+  getUsers() {
+    this.formularioService.getUsers().subscribe(
+      users => {
+       this.users = users;
+      }
+    );
   }
 
 }
