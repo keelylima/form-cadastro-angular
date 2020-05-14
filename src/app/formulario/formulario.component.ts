@@ -22,23 +22,6 @@ export class FormularioComponent implements OnInit {
 
   users: any[];
 
-// cadastros: any = [
-//   {
-//     nome: 'Ana',
-//     datNasc: '10-02-2003',
-//     sexo: 'Feminino'
-//   },
-//   {
-//     nome: 'Julio',
-//     datNasc: '10-02-1992',
-//     sexo: 'Masculino'
-//   }
-// ]
-
-  // onSubmit(form) {
-  //   console.log(form.value)
-  // }
-
   addUser(user) {
       this.users.push({ 
       nome: user.nome,
@@ -63,11 +46,6 @@ export class FormularioComponent implements OnInit {
   hideForm() {
     this.isForm = false;
   }
-
-  search(evento) {
-    console.log(evento.target.value)
-  }
-
 
   constructor(private formularioService: FormularioService) { }
 
