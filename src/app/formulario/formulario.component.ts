@@ -38,12 +38,8 @@ export class FormularioComponent implements OnInit {
     })
   }
 
-  showForm() {
-    this.isForm = true;
-  }
-
-  hideForm() {
-    this.isForm = false;
+  showHideForm() {
+    this.isForm = !this.isForm;
   }
 
   constructor(private formularioService: FormularioService) { }

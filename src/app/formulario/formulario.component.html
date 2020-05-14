@@ -28,7 +28,7 @@
     </tbody>
   </table>
 
-  <button class="btn btn-secondary" (click)="showForm()">Adicionar!</button>
+  <button class="btn btn-secondary" (click)="showHideForm()">Adicionar!</button>
 </div>
 
 
@@ -57,6 +57,6 @@
   </div>
 
   <button class="btn btn-danger mr-3" (click)="cleanForm(f)">Cancelar</button>
-  <button type="submit" (click)="addUser(f.value)" (click)="hideForm()" (click)="cleanForm(f)" [disabled]="!f.valid" class="btn btn-primary">Salvar</button>
+  <button type="submit" (click)="addUser(f.value)" (click)="showHideForm()" (click)="cleanForm(f)" [disabled]="!f.valid" class="btn btn-primary">Salvar</button>
 
 </form>
